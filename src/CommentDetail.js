@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CommentDetail = ({ author, img, comment, timeAgo }) => {
 	return (
@@ -17,6 +18,13 @@ const CommentDetail = ({ author, img, comment, timeAgo }) => {
 			</div>
 		</div>
 	)
+}
+
+CommentDetail.propTypes = {
+	author: PropTypes.string.isRequired,
+	img: PropTypes.string.isRequired,
+	comment: PropTypes.string.isRequired,
+	timeAgo: PropTypes.string.isRequired
 }
 
 export default CommentDetail;
